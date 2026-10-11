@@ -1,0 +1,59 @@
+/* Matrix design tokens — extracted from the redesign canvas.
+   Plain CSS custom properties; map into Tailwind v4 via @theme or into shadcn/ui's CSS variables. */
+
+:root {
+  /* Surfaces */
+  --mx-bg: #FAF9F5;            /* app ground (Ivory) — never pure white for the page */
+  --mx-surface: #FFFFFF;       /* cards, panels, composer, side panel */
+  --mx-surface-sunken: #F5F4ED;/* code blocks */
+  --mx-surface-muted: #F0EEE6; /* user message bubble, segmented control track, icon tiles, ID chips */
+  --mx-hover: rgba(115, 114, 108, 0.10); /* ghost button hover */
+  --mx-avatar: #E3DACC;        /* Oat */
+
+  /* Text */
+  --mx-text: #141413;          /* Slate — primary text, primary button fill */
+  --mx-text-secondary: #5E5D59;/* secondary text, captions (passes 4.5:1 on ivory and white) */
+  --mx-text-placeholder: #73726C;
+  --mx-text-faint: #9C9A92;    /* code line numbers only — decorative */
+  --mx-on-dark: #FAF9F5;       /* text on primary button */
+
+  /* Borders — always Slate at low alpha, never colored */
+  --mx-border: rgba(31, 30, 29, 0.15);        /* cards, inputs, chips */
+  --mx-border-strong: rgba(31, 30, 29, 0.30); /* hover */
+  --mx-divider: rgba(31, 30, 29, 0.10);       /* header, panel edges */
+  --mx-divider-row: rgba(31, 30, 29, 0.07);   /* table rows, step list */
+
+  /* Brand accent — ONE use: Spark mark, send button, active spinner arc, unread dot */
+  --mx-accent: #D97757;        /* Clay. Swappable (canvas tweak offered #C8362F legacy red, #2A78D6, #141413) */
+
+  /* Coverage status — reserved, never reused for anything else, always paired with a text label */
+  --mx-covered: #558A42;       /* green */
+  --mx-partial: #C9A82D;       /* amber */
+  --mx-uncovered: #D1CFC5;     /* warm grey bar fill — "not covered" is the default state, not an error */
+  --mx-uncovered-ring: #B0AEA5;/* hollow ring marker for uncovered rows */
+  --mx-track: #E8E6DC;         /* progress track, code highlight line */
+
+  /* Type */
+  --mx-font-display: 'Newsreader', 'Anthropic Serif', Georgia, 'Times New Roman', serif;
+  --mx-font-ui: 'Albert Sans', system-ui, 'Segoe UI', Helvetica, sans-serif;
+  --mx-font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* Radii */
+  --mx-radius-sm: 8px;    /* row actions, small ghost buttons */
+  --mx-radius-md: 10px;   /* buttons, chips, inputs */
+  --mx-radius-lg: 12px;   /* option rows, code blocks, suggestion chips */
+  --mx-radius-xl: 14px;   /* artifact card, run strip, notification, callouts */
+  --mx-radius-2xl: 16px;  /* tool cards (scope, progress) */
+  --mx-radius-3xl: 18px;  /* composer, message bubble */
+
+  /* Elevation */
+  --mx-shadow-card: 0 1px 2px rgba(20, 20, 19, 0.03);
+  --mx-shadow-composer: 0 1px 2px rgba(20, 20, 19, 0.04), 0 8px 24px rgba(20, 20, 19, 0.05);
+  --mx-shadow-popover: 0 10px 30px rgba(20, 20, 19, 0.12), 0 1px 2px rgba(20, 20, 19, 0.05);
+
+  /* Layout */
+  --mx-header-h: 56px;
+  --mx-thread-max: 800px;        /* chat column, no side panel */
+  --mx-thread-max-split: 680px;  /* chat column when side panel is open */
+  --mx-panel-max: 820px;         /* side panel */
+}

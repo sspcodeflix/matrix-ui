@@ -1,0 +1,79 @@
+/* Theme layer on top of tokens.css.
+   Adds the few semantic tokens the light design hard-coded, and the warm-dark theme
+   ("warm-dark, not black + red").
+   Theme is set by data-theme on <html> ("light" | "dark"); src/lib/theme.ts resolves "system" to one of them. */
+
+:root {
+  color-scheme: light;
+  --mx-font-display: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+
+  --mx-border-card: rgba(31, 30, 29, 0.12);   /* tool cards, option rows, KPI rules, table heads */
+  --mx-border-subtle: rgba(31, 30, 29, 0.08); /* code block */
+  --mx-border-pill: rgba(31, 30, 29, 0.18);
+  --mx-ring-pending: rgba(31, 30, 29, 0.25);  /* pending step ring */
+  --mx-radio-border: rgba(31, 30, 29, 0.35);
+  --mx-chip-hover: rgba(115, 114, 108, 0.08);
+  --mx-seg-active: var(--mx-surface);         /* selected segment in a segmented control */
+  --mx-switch-off: #C2C0B6;
+  --mx-switch-knob: #FFFFFF;
+  /* Matrix palette: the accent IS the brand green. Clay is kept for one job:
+     "needs you" signals (unread dots, a gate waiting on you). */
+  --mx-accent: #0E7A3D;          /* deep green; white icons on it 5.4:1 */
+  --mx-accent-hover: #0B6632;
+  --mx-on-accent: #FFFFFF;
+  --mx-attention: #D97757;
+  --mx-shadow-strip: 0 1px 2px rgba(20, 20, 19, 0.04);
+  --mx-shadow-seg: 0 1px 2px rgba(20, 20, 19, 0.08);
+  --mx-brand: #0E7A3D;          /* Matrix wordmark only. Deep green, 5.2:1 on ivory */
+}
+
+/* Warm dark. Same roles as light; primary actions invert to ivory fill + slate text. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --mx-bg: #1F1E1C;
+  --mx-surface: #2A2926;
+  --mx-surface-sunken: #181816;
+  --mx-surface-muted: #34332F;
+  --mx-hover: rgba(250, 249, 245, 0.08);
+  --mx-avatar: #57534B;
+
+  --mx-text: #FAF9F5;            /* also primary button fill */
+  --mx-text-secondary: #C2C0B6;  /* 7:1 on surface */
+  --mx-text-placeholder: #9C9A92;/* 4.8:1 on surface */
+  --mx-text-faint: #7A7871;
+  --mx-on-dark: #141413;         /* text on the (now ivory) primary button */
+
+  --mx-border: rgba(250, 249, 245, 0.14);
+  --mx-border-strong: rgba(250, 249, 245, 0.30);
+  --mx-divider: rgba(250, 249, 245, 0.10);
+  --mx-divider-row: rgba(250, 249, 245, 0.07);
+  --mx-border-card: rgba(250, 249, 245, 0.12);
+  --mx-border-subtle: rgba(250, 249, 245, 0.08);
+  --mx-border-pill: rgba(250, 249, 245, 0.20);
+  --mx-ring-pending: rgba(250, 249, 245, 0.28);
+  --mx-radio-border: rgba(250, 249, 245, 0.40);
+  --mx-chip-hover: rgba(250, 249, 245, 0.06);
+  --mx-seg-active: #4A4945;
+
+  --mx-accent: #3DE07F;          /* phosphor green; dark icons on it 10.4:1 */
+  --mx-accent-hover: #62E899;
+  --mx-on-accent: #0D1A12;
+  --mx-attention: #D97757;
+
+  --mx-covered: #6FA35A;
+  --mx-partial: #D4B43C;
+  --mx-uncovered: #5C5A54;
+  --mx-uncovered-ring: #8C8A82;
+  --mx-track: #43423E;
+
+  --mx-switch-off: #5E5D59;
+  --mx-switch-knob: #FAF9F5;
+
+  --mx-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --mx-shadow-composer: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --mx-shadow-popover: 0 10px 30px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --mx-shadow-strip: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --mx-shadow-seg: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --mx-brand: #3DE07F;          /* Phosphor green, 8.8:1 on the dark ground. Not the olive 'covered' status green */
+}

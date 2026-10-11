@@ -1,0 +1,11 @@
+node_modules
+dist
+*.tsbuildinfo
+*.log
+.env*
+.DS_Store
+.vscode
+.idea
+
+# Mock backend data: holds the local master key and encrypted test tokens. Never commit.
+mock/.data
